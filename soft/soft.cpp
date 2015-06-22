@@ -143,7 +143,24 @@ void QuickStep(int* a, int low, int high)
 //简单选择排序
 void ChooseSort(int* a, int n)
 {
-	
+    int i, j, k, bak, temp;
+    for (i = 0; i < n - 1; ++i)
+    {
+        k = i;
+        for (j = i + 1; j < n; ++j)
+        {
+            if (a[k] > a[j])
+            {
+                k = j;
+            }
+        }
+        if (i != k)
+        {
+            temp = a[i];
+            a[i] = a[k];
+            a[k] = temp;
+        }
+    }
 }
 
 //堆排序
