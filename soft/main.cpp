@@ -17,7 +17,7 @@ int main()
 {
 	int a[N] = {35, 67, 93, 25, 19, 5, 38, 79, 29, 8};
 	
-	
+    BubbleSoft(a, N);	
 	display(a, N);
 	return 0;
 }
