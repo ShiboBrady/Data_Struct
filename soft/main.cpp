@@ -1,5 +1,5 @@
+#include "soft.h"
 #include <stdio.h>
-#include "soft.c"
 
 const static int N = 10;
 
@@ -13,11 +13,13 @@ void display(int* a, int n)
 	printf("\n");
 }
 
+
 int main()
 {
 	int a[N] = {35, 67, 93, 25, 19, 5, 38, 79, 29, 8};
-	
-    BubbleSoft(a, N);	
+    void (*func)(int a[], int length);
+	func = InsertSort;	
+    func(a, N);
 	display(a, N);
 	return 0;
 }
